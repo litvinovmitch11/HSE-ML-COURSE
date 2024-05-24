@@ -19,6 +19,7 @@ class App:
                 print(self._model.get_stats(self._args.data, test_size))
         elif self._args.mode == 'predict':
             self._model = Model(self._args.model)
-            print(self._model.get_predict(self._args.data))
+            for nums in self._model.get_predict(self._args.data):
+                print(nums)
         else:
             raise RuntimeError('mode not found')

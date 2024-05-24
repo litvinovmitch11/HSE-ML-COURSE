@@ -54,7 +54,7 @@ class Model():
             X_test = data.text_stemmed
         else:
             X_test = pd.Series([self._preprocess_sentence_eng(data_dir)])
-        return self.model.predict(X_test)
+        return list(self.model.predict(X_test))
 
     def _preprocess_sentence_eng(self, text):
         stemmer = PorterStemmer()
