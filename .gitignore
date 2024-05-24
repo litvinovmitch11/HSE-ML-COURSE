@@ -1,3 +1,6 @@
 venv/
 data/*
 notebooks/catboost_info
+content/hw-07/__pycache__
+content/hw-07/*.pkl
+content/hw-07/*.csv
